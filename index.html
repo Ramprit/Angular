@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Acme Product Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="node_modules/bootswatch/united/bootstrap.css" rel="stylesheet" />
+    <link href="node_modules/bootswatch/united/bootstrap.css" rel="stylesheet" />
+    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="app/app.component.css" rel="stylesheet" />
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
+    </script>
+</head>
+
+<body class="container">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+            <a href="#"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        </li>
+        <li role="presentation">
+            <a href="#"> <i class="fa fa-users" aria-hidden="true"></i> Profile</a>
+        </li>
+        <li role="presentation"><a href="#"><i class="fa fa-comments" aria-hidden="true"></i> Messages</a></li>
+    </ul>
+    <div class="h4">
+        <pm-app></pm-app>
+    </div>
+    <div class="panel panel-primary" style="width:50%;">
+        <div class="panel-body">
+            <form action="" method="GET" role="form" novalidate>
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" id="Fname" placeholder="Must enter first name !">
+                </div>
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control" id="Lname" placeholder="Must enter Last name !">
+                </div>
+                <div class="form-group">
+                    <label for="">Email-Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Must enter Email-Address !">
+                </div>
+                <div class="form-group">
+                    <label for="">Mobile Number</label>
+                    <input type="text" class="form-control" id="MNumber" placeholder="Must enter Mobile Number !">
+                </div>
+                <button type="button" id="btnsave" data-loading-text="Loading..." class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Submit</button>
+                <button type="button" data-loading-text="Loading..." class="btn btn-primary"> <i class="fa fa-ban" aria-hidden="true"></i> Cancel</button>
+            </form>
+        </div>
+    </div>
+    <blockquote class="blockquote">
+        <p class="mb-0 text-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script>
+        $("#btnsave").click(function() {
+            var $btn = $(this);
+            $btn.button('loading');
+            // simulating a timeout
+            setTimeout(function() {
+                $btn.button('reset');
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

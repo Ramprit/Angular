@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="node_modules/bootswatch/united/bootstrap.css" rel="stylesheet" />
+    <link href="node_modules/bootswatch/united/bootstrap.css" rel="stylesheet" />
+    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="app/app.component.css" rel="stylesheet" />
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+            <a href="#"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        </li>
+        <li role="presentation">
+            <a href="#"> <i class="fa fa-users" aria-hidden="true"></i> Profile</a>
+        </li>
+        <li role="presentation"><a href="#"><i class="fa fa-comments" aria-hidden="true"></i> Messages</a></li>
+    </ul>
+
+    <div class="panel panel-success" style="width:50%; margin-top:50px;">
+        <div class="panel-heading">
+            <h3 class="panel-title">Employee Registration</h3>
+        </div>
+        <div class="panel-body">
+
+            <form action="" method="GET" role="form">
+
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" id="FName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control" id="LName" placeholder="Last Name">
+                </div>
+                <button type="button" id="btnSave" data-loading-text="Loading..." class="btn btn-primary btn-primary-outline">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script>
+        $("#btnSave").click(function() {
+            var $btn = $(this);
+            $btn.button('loading');
+            // simulating a timeout
+            setTimeout(function() {
+                $btn.button('reset');
+            }, 1000);
+        });
+    </script>
+</body>
+
+
+</html>
